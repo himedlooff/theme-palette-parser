@@ -1,0 +1,49 @@
+body {
+	margin: 0;
+	padding: 3em;
+	background: #fff;
+	color: #000;
+	font-family: Arial, sans-serif;
+	font-size: 100%;
+}
+
+.palette {
+	position: relative;
+	-webkit-transition: .25s all ease-out;
+}
+
+.palette.is-active {
+	-webkit-transform: perspective( 600px ) translateY( 300px );
+}
+
+.swatch {
+	position: absolute;
+		top: 3em;
+	display: inline-block;
+	background: #fff;
+	box-shadow: -1px 1px 1px rgba(0,0,0,.2);
+	cursor: pointer;
+	-webkit-transform: perspective( 600px ) rotateX( 0deg ) rotateY( 45deg );
+	-webkit-transition: .15s all ease-out;
+}
+
+.swatch:hover {
+	-webkit-transform: perspective( 600px ) rotateX( 0deg ) rotateY( 45deg ) translateY( 40px );
+}
+
+.swatch.is-active {
+	box-shadow: 0 1px 4px rgba(0,0,0,.2);
+	-webkit-transform: perspective( 600px ) rotateX( 0deg ) rotateY( 0deg );
+	-webkit-transition: .25s all ease-out;
+}
+
+.swatch-color {
+	display: block;
+	width: 10em;
+	height: 10em;
+}
+
+.swatch-name {
+	padding: 0.5em; /* 6/12 */
+	font-size: 0.75em;
+}
